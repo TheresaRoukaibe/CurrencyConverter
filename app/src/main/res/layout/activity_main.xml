@@ -66,7 +66,7 @@
         android:id="@+id/button"
         android:layout_width="193dp"
         android:layout_height="62dp"
-        android:background="#5ABD5E"
+        android:backgroundTint="#8DAF66"
         android:onClick="logMeIn"
         android:text="Log In"
         android:textSize="34sp"
@@ -74,7 +74,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.638"
+        app:layout_constraintVertical_bias="0.539"
         tools:ignore="TextContrastCheck" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="217dp"
+        android:layout_height="322dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="98dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:srcCompat="@drawable/money" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
