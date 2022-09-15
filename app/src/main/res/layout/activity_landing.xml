@@ -17,7 +17,7 @@
         app:layout_constraintHorizontal_bias="0.108"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.62" />
+        app:layout_constraintVertical_bias="0.656" />
 
     <TextView
         android:id="@+id/LBP_text"
@@ -49,7 +49,7 @@
         android:id="@+id/buttonToLBP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="68dp"
+        android:layout_marginBottom="32dp"
         android:backgroundTint="#8DAF66"
         android:onClick="convertToLBP"
         android:text="Convert"
@@ -71,21 +71,57 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LBP_text"
-        app:layout_constraintVertical_bias="0.431" />
+        app:layout_constraintVertical_bias="0.638" />
 
     <EditText
         android:id="@+id/USD_am"
-        android:layout_width="256dp"
-        android:layout_height="63dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="numberDecimal"
         android:text="Enter in $"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/buttonToLBP"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.577"
+        app:layout_constraintHorizontal_bias="0.56"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/USD_text"
-        app:layout_constraintVertical_bias="0.337" />
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/america"
+        android:layout_width="97dp"
+        android:layout_height="317dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/USD_am"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/america" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="97dp"
+        android:layout_height="317dp"
+        android:layout_marginEnd="32dp"
+        android:cropToPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/america"
+        app:srcCompat="@drawable/lebanon" />
+
+    <TextView
+        android:id="@+id/rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="73dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Our Daily Rate: 1$ = 40000 L.L. :("
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/LBP_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

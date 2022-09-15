@@ -23,11 +23,11 @@ public class LandingActivity extends AppCompatActivity {
         Toast message;
         String lbp_value = LBP.getText().toString();
         double lbpVal = Double.parseDouble(lbp_value);
-        if(lbp_value.isEmpty()){
+        if(lbpVal == 0){
             Toast.makeText(getApplicationContext(), "PLease enter value", Toast.LENGTH_LONG).show();
         }else{
             double newVal = lbpVal/40000;
-            message=Toast.makeText(getApplicationContext(), lbp_value+ " in USD is: " + newVal + " $", Toast.LENGTH_LONG);
+            message=Toast.makeText(getApplicationContext(), lbp_value+ " L.L. in USD is: " + newVal + " $", Toast.LENGTH_LONG);
             message.show();
         }
 
@@ -38,11 +38,11 @@ public class LandingActivity extends AppCompatActivity {
         Toast message;
         String usd_value = USD.getText().toString();
         double usdVal = Double.parseDouble(usd_value);
-        if(usd_value.isEmpty()){
+        if(usdVal == 0){
             Toast.makeText(getApplicationContext(), "PLease enter value", Toast.LENGTH_LONG).show();
         }else{
             double newVal = usdVal*40000;
-            message=Toast.makeText(getApplicationContext(), usd_value+ " in LBP is: " + newVal + " L.L.", Toast.LENGTH_LONG);
+            message=Toast.makeText(getApplicationContext(), usd_value+ " $ in LBP is: " + newVal + " L.L.", Toast.LENGTH_LONG);
             message.show();
         }
     }
