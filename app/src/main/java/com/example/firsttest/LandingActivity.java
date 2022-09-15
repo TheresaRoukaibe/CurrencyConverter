@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.NumberFormat;
+
 public class LandingActivity extends AppCompatActivity {
     public TextView USD;
     public TextView LBP;
@@ -22,29 +24,31 @@ public class LandingActivity extends AppCompatActivity {
     public void convertToUSD(View v){
         Toast message;
         String lbp_value = LBP.getText().toString();
-        double lbpVal = Double.parseDouble(lbp_value);
-        if(lbpVal == 0){
-            Toast.makeText(getApplicationContext(), "PLease enter value", Toast.LENGTH_LONG).show();
-        }else{
+        try {
+            double lbpVal = Double.parseDouble(lbp_value);
             double newVal = lbpVal/40000;
             message=Toast.makeText(getApplicationContext(), lbp_value+ " L.L. in USD is: " + newVal + " $", Toast.LENGTH_LONG);
             message.show();
+        }catch(NumberFormatException e){
+            Toast.makeText(getApplicationContext(), "Please input value in L.L.", Toast.LENGTH_LONG).show();
+        }
+
         }
 
 
-    }
 
     public void convertToLBP(View v){
         Toast message;
         String usd_value = USD.getText().toString();
-        double usdVal = Double.parseDouble(usd_value);
-        if(usdVal == 0){
-            Toast.makeText(getApplicationContext(), "PLease enter value", Toast.LENGTH_LONG).show();
-        }else{
+        try {
+            double usdVal = Double.parseDouble(usd_value);
             double newVal = usdVal*40000;
             message=Toast.makeText(getApplicationContext(), usd_value+ " $ in LBP is: " + newVal + " L.L.", Toast.LENGTH_LONG);
             message.show();
+        }catch(NumberFormatException e){
+            Toast.makeText(getApplicationContext(), "PLease input value in $", Toast.LENGTH_LONG).show();
         }
-    }
+
+        }
 
 }
